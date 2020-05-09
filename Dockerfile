@@ -1,7 +1,7 @@
 # Based on https://github.com/roboll/helmfile/blob/master/Dockerfile.helm3
 FROM alpine:3.11
 
-RUN apk add --no-cache ca-certificates git bash curl jq python
+RUN apk add --no-cache ca-certificates git bash curl jq python openssh-client
 
 ARG HELM_VERSION=v3.2.1
 ARG HELM_LOCATION="https://get.helm.sh"
