@@ -1,12 +1,14 @@
 # Based on https://github.com/roboll/helmfile/blob/master/Dockerfile.helm3
-FROM alpine:3.11
+FROM alpine:3.12
 
-RUN apk add --no-cache ca-certificates git bash curl jq python openssh-client
+RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories 
 
-ARG HELM_VERSION=v3.2.1
+RUN apk add --update --no-cache ca-certificates git bash curl jq python3 openssh-client yq
+
+ARG HELM_VERSION=v3.4.1
 ARG HELM_LOCATION="https://get.helm.sh"
 ARG HELM_FILENAME="helm-${HELM_VERSION}-linux-amd64.tar.gz"
-ARG HELM_SHA256="018f9908cb950701a5d59e757653a790c66d8eda288625dbb185354ca6f41f6b"
+ARG HELM_SHA256="538f85b4b73ac6160b30fd0ab4b510441aa3fa326593466e8bf7084a9c288420"
 RUN wget ${HELM_LOCATION}/${HELM_FILENAME} && \
     echo Verifying ${HELM_FILENAME}... && \
     sha256sum ${HELM_FILENAME} | grep -q "${HELM_SHA256}" && \
