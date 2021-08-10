@@ -1,5 +1,26 @@
 # Change log
 
+## [1.4.0]
+
+### Changed
+
+- Added linkerd2-cli (stable-2.10.2)
+
+## [1.3.0]
+
+### Changed
+
+- Bumped helm and helm-s3 plugin to the latest (currently) versions
+- Bumped alpine image
+
+## [1.2.0]
+
+### Changed
+
+- Bumped helm and helm-s3 plugin to the latest (currently) versions
+- Bumped alpine image
+- Added yq
+
 ## [1.1.0]
 
 ### Changed
