@@ -28,6 +28,6 @@ RUN wget https://github.com/linkerd/linkerd2/releases/download/${LINKERD2_VERSIO
     echo Verifying ${LINKERD2_FILENAME}... && \
     sha256sum ${LINKERD2_FILENAME} | grep -q "${LINKERD2_SHA256}" && \
     chmod 755 ${LINKERD2_FILENAME} && \
-    mv ${LINKERD2_FILENAME} /usr/local/bin/
+    mv ${LINKERD2_FILENAME} /usr/local/bin/linkerd
 
 CMD /usr/local/bin/helm
