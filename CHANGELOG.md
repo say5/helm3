@@ -1,5 +1,11 @@
 # Change log
 
+## [1.4.1]
+
+### Changed
+
+- Bumped helm to 3.7.0
+
 ## [1.4.0]
 
 ### Changed

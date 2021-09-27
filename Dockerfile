@@ -5,10 +5,10 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repos
 
 RUN apk add --update --no-cache ca-certificates git bash curl jq python3 openssh-client yq
 
-ARG HELM_VERSION=v3.6.3
+ARG HELM_VERSION=v3.7.0
 ARG HELM_LOCATION="https://get.helm.sh"
 ARG HELM_FILENAME="helm-${HELM_VERSION}-linux-amd64.tar.gz"
-ARG HELM_SHA256="07c100849925623dc1913209cd1a30f0a9b80a5b4d6ff2153c609d11b043e262"
+ARG HELM_SHA256="096e30f54c3ccdabe30a8093f8e128dba76bb67af697b85db6ed0453a2701bf9"
 RUN wget ${HELM_LOCATION}/${HELM_FILENAME} && \
     echo Verifying ${HELM_FILENAME}... && \
     sha256sum ${HELM_FILENAME} | grep -q "${HELM_SHA256}" && \
