@@ -1,5 +1,12 @@
 # Change log
 
+## [1.5.0]
+
+### Changed
+
+- Added aws-cli
+- Enabled HELM_EXPERIMENTAL_OCI (in order to be able to use AWS ECR)
+
 ## [1.4.2]
 
 ### Changed

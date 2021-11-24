@@ -1,9 +1,11 @@
 # Based on https://github.com/roboll/helmfile/blob/master/Dockerfile.helm3
 FROM alpine:3.14
 
+ENV HELM_EXPERIMENTAL_OCI=1
+
 RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories 
 
-RUN apk add --update --no-cache ca-certificates git bash curl jq python3 openssh-client yq
+RUN apk add --update --no-cache ca-certificates git bash curl jq python3 openssh-client yq aws-cli
 
 ARG HELM_VERSION=v3.7.1
 ARG HELM_LOCATION="https://get.helm.sh"
@@ -31,3 +33,4 @@ RUN wget https://github.com/linkerd/linkerd2/releases/download/${LINKERD2_VERSIO
     mv ${LINKERD2_FILENAME} /usr/local/bin/linkerd
 
 CMD /usr/local/bin/helm
+
