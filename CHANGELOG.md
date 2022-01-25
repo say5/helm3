@@ -1,5 +1,11 @@
 # Change log
 
+## [1.6.0]
+
+### Changed
+
+- Added tmate
+
 ## [1.5.0]
 
 ### Changed
