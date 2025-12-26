@@ -1,5 +1,13 @@
 # Change log
 
+## [2.0.0]
+
+### Changed
+
+- helm bumped to 3.19.4
+- bumped s3 plugin to 0.17.1
+- linkerd removed
+
 ## [1.7.0]
 
 ### Changed
@@ -7,7 +15,6 @@
 - helm bumped to 3.9.0
 - bumped s3 plugin to 0.12.0
 - bumped linkerd to 2.11.3
-
 
 ## [1.6.0]
 
